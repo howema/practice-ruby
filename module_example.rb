@@ -1,7 +1,7 @@
-class Vehicle
+module Idk
   def initialize
     @speed = 0
-    @direction = 'north'
+    @direction = "north"
   end
 
   def brake
@@ -17,34 +17,24 @@ class Vehicle
   end
 end
 
-class Car < Vehicle
-  def initialize(input_options)
-    super
-    @make = input_options[:make]
-    @model = input_options[:model]
-  end
-
-  def print_info
-    puts @make
-    puts @model
-  end
+class Car
+  include Idk
 
   def honk_horn
     puts "Beeeeeeep!"
   end
 end
 
-class Bike < Vehicle
+class Bike
+  include Idk
+
   def ring_bell
     puts "Ring ring!"
   end
 end
 
-
-car = Car.new(make: "Toyota", model: "Corolla")
+car = Car.new
 bike = Bike.new
 
 car.honk_horn
 bike.ring_bell
-
-car.print_info
