@@ -1,5 +1,6 @@
 require "./skate.rb"
 require "./blueberry.rb"
+#require "./module.rb"
 
 skate1 = Skate.new(color: "blue", price: 250, size: 10, item: "skate")
 skate2 = Skate.new(color: "aqua", price: 300, size: 7, item: "skate")
